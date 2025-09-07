@@ -1,9 +1,16 @@
 .grid{
   display: grid;
   grid-template-columns: repeat(12, 1fr); 
-  gap: 8px; 
+  gap: 20px; 
+  background:rgb(203, 203, 203);
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
 }
-
+.grid > div {
+  align-self: start;
+}
 [class*="col-"] {
   padding: 8px;
   border: 1px solid #ccc;
@@ -23,94 +30,149 @@
   
 }
 
-.grid{
-  background:greenyellow;
-}
 .grid *,
 .flex .row * {
   background: pink;
   border: 1px solid #000000;
   margin-top: 10px;
-}
-/*Establecer Grid*/
-.flex .columns-12 {
-  flex: 0 0 calc((100% / 12) * 12);
-}
-.flex .columns-11 {
-  flex: 0 0 calc((100% / 12) * 11);
-}
-.flex  .columns-10 {
-  flex: 0 0 calc((100% / 12) * 10);
-}
-.flex  .columns-9 {
-  flex: 0 0 calc((100% / 12) * 9);
-}
-.flex  .columns-8 {
-  flex: 0 0 calc((100% / 12) * 8);
-}
-.flex  .columns-7 {
-  flex: 0 0 calc((100% / 12) * 7);
-}
-.flex  .columns-6 {
-  flex: 0 0 calc((100% / 12) * 6);
-}
-.flex  .columns-5 {
-  flex: 0 0 calc((100% / 12) * 5);
-}
-.flex  .columns-4 {
-  flex: 0 0 calc((100% / 12) * 4);
-}
-.flex  .columns-3 {
-  flex: 0 0 calc((100% / 12) * 3);
-}
-.flex  .columns-2 {
-  flex: 0 0 calc((100% / 12) * 2);
-}
-.flex  .columns-1 {
-  flex: 0 0 calc((100% / 12) * 1);
+  text-align: center;
+  border-radius: 5px;
 }
 
-
-
-/*Completar*/
-@media screen and (min-width: 768px){
-  .grid .columns-12 {
-    grid-column: span 12; 
-  }
-  .grid .columns-11 {
-    grid-column: span 11;
-  }
-  .grid  .columns-10 {
-    grid-column: span 10;
-  }
-  .grid  .columns-9 {
-    grid-column: span 9;
-  }
-  .grid  .columns-8 {
-    grid-column: span 8;
-  }
-  .grid  .columns-7 {
-    grid-column: span 7;
-  }
-  .grid .columns-6 {
-    grid-column: span 6;
-  }
-  .grid  .columns-5 {
-    grid-column: span 5;
-  }
-  .grid .columns-4 {
-    grid-column: span 4;
-  }
-  .grid .columns-3 {
-    grid-column: span 3;
-  }
-  .grid .columns-2 {
-    grid-column: span 2;
-  }
-  .grid .columns-1 {
-    grid-column: span 1;
-  } 
-}
-.grid * {
+/* mobile first, no puse todo junto ya que todos tienen una medida*/
+/* S */
+.grid .columns-1 {
   grid-column: span 12;
+  min-height: 80px;
+  background: royalblue;
+}
+.grid .columns-2 {
+  grid-column: span 12;
+  min-height: 80px;
+  background: royalblue;
+}
+.grid .columns-3 {
+  grid-column: span 12;
+  min-height: 80px;
+  background: royalblue;
+}
+.grid .columns-4 {
+  grid-column: span 12;
+  min-height: 80px;
+  background:forestgreen;
+}
+.grid .columns-5 {
+  grid-column: span 12;
+  min-height: 80px;
+  background: forestgreen;
+}
+.grid .columns-6 {
+  grid-column: span 12;
+  min-height: 200px;
+  background: rgb(139, 36, 34);
+
+}
+.grid .columns-7 {
+  grid-column: span 12;
+  min-height: 200px;
+  background: rgb(139, 34, 73);
+}
+.grid .columns-8 {
+  grid-column: span 12;
+  min-height: 80px;
+  background: rgb(237, 255, 104);
+}
+
+
+
+/*Para Tablets*/
+/* M */
+@media screen and (min-width: 481px) and (max-width: 1279px) {
+.grid .columns-1 {
+  grid-column: span 4;
+  min-height: 80px;
+  background: royalblue;
+}
+.grid .columns-2 {
+  grid-column: span 4;
+  min-height: 80px;
+  background: royalblue;
+}
+.grid .columns-3 {
+  grid-column: span 4;
+  min-height: 80px;
+  background: royalblue;
+}
+.grid .columns-4 {
+  grid-column: span 12;
+  min-height: 80px;
+  background:forestgreen;
+}
+.grid .columns-5 {
+  grid-column: span 12;
+  min-height: 80px;
+  background: forestgreen;
+}
+.grid .columns-6 {
+  grid-column: span 2;
+  min-height: 80px;
+  background: rgb(139, 36, 34);
+
+}
+.grid .columns-7 {
+  grid-column: span 7;
+  max-height: 200px;
+  background: rgb(139, 34, 73);
+}
+.grid .columns-8 {
+  grid-column: span 3;
+  min-height: 80px;
+  background: rgb(237, 255, 104);
+}
+}
+
+/*Para Computadoras*/
+/* L */
+@media screen and (min-width: 1280px) {
+.grid .columns-1 {
+  grid-column: span 3;
+  min-height: 80px;
+  background: royalblue;
+}
+.grid .columns-2 {
+  grid-column: span 3;
+  min-height: 80px;
+  background: royalblue;
+}
+.grid .columns-3 {
+  grid-column: span 6;
+  min-height: 80px;
+  background: royalblue;
+}
+.grid .columns-4 {
+  grid-column: span 6;
+  min-height: 80px;
+  background:forestgreen;
+}
+.grid .columns-5 {
+  grid-column: span 6;
+  min-height: 80px;
+  background: forestgreen;
+}
+.grid .columns-6 {
+  grid-column: span 8;
+  min-height: 200px;
+  background: rgb(139, 36, 34);
+
+}
+.grid .columns-7 {
+  grid-column: span 4;
+  max-height: 200px;
+  background: rgb(139, 34, 73);
+}
+.grid .columns-8 {
+  grid-column: span 12;
+  min-height: 80px;
+  background: rgb(237, 255, 104);
+}
 }
